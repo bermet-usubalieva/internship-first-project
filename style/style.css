@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    padding: 0 40px;
+}
+
+.header {
+    padding: 30px 20px 0 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoLink {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.logoImg {
+    width: 50px;
+    margin-right: -10px;
+}
+
+.logoText {
+    font-family: 'DM Sans', sans-serif;
+    color: rgb(25, 25, 27);
+    font-weight: 800;
+    font-size: 23px;
+}
+
+
+.navUl {
+    display: flex;
+    gap: 49px;
+}
+
+.menuItem {
+    color: rgb(105, 104, 113);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.menuItem::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgb(84, 84, 212);
+    bottom: -10px;
+    left: 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.menuItem:hover {
+    color: rgb(25, 25, 27);
+}
+
+.menuItem:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.headerButton {
+    width: 210px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(255, 113, 67);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.headerButton:hover {
+    background: rgb(84, 84, 212);
+}
+
+.headerBurger {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.headerBurger span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 113, 67);
+    display: block;
+    left: 5px;
+    transition: 0.3s;
+}
+
+.headerBurger span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.headerBurger span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.header.open .headerBurger span {
+    background-color: rgb(255, 255, 255);
+}
+
+.header.open .headerBurger span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .headerBurger span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .headerBurger span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+/* Main */
+
+.bannerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bannerLeft {
+    max-width: 460px;
+}
+
+.mainTitle {
+    color: rgb(25, 25, 27);
+    font-family: "DM Sans", sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 77px;
+    margin-bottom: 30px;
+}
+
+.bannerText {
+    color: rgb(105, 104, 113);
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.bannerButtonWrap {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.bannerButton {
+    width: 210px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(84, 84, 212);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bannerButton:hover {
+    background: rgb(255, 113, 67);
+}
+
+.bannerArrowWrap {
+    box-sizing: border-box;
+    border: 1px solid rgb(231, 231, 231);
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.bannerArrowWrap:hover {
+    background: rgb(255, 113, 67);
+}
+
+.svgSection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.contentSection,
+.metricsSection {
+    display: flex;
+    gap: 165px;
+    align-items: center;
+    margin-top: 160px;
+    margin-bottom: 83px;
+}
+
+.contentRight,
+.metricsRight {
+    max-width: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contentTitle {
+    color: rgb(25, 25, 27);
+    font-family: "DM Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 57px;
+}
+
+.contentText {
+    color: rgb(105, 104, 113);
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.contentLink {
+    color: rgb(84, 84, 212);
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    transition: 0.3s;
+}
+
+.contentLink:hover {
+    color: rgb(255, 113, 67);
+}
+
+.benchmarksSection {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.benchmarkssvg {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.benchmarksTitle {
+    margin-top: 7px;
+    margin-bottom: 20px;
+    color: rgb(25, 25, 27);
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.benchmarksText {
+    color: rgb(105, 104, 113);
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+
+
+.footerTop {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 98px;
+}
+
+.footerTitle {
+    color: rgb(25, 25, 27);
+    font-family: " DM Sans", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+    width: 530px;
+}
+
+.footerBtnWrap {
+    display: flex;
+    width: 350px;
+    height: 65px;
+    border-radius: 10px;
+    background: rgb(247, 247, 251);
+    align-items: center;
+    justify-content: center;
+}
+
+.footerBtnLeft,
+.footerBtnRight {
+    border-radius: 10px 0px 0px 10px;
+    background: rgb(84, 84, 212);
+    width: 160px;
+    height: 55px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.footerBtnRight {
+    border-radius: 0px 10px 10px 0px;
+    background: rgb(247, 247, 251);
+    transition: 0.3s;
+    color: rgb(25, 25, 27);
+}
+
+.footerBtnRight:hover {
+    background: rgb(255, 113, 67);
+    color: rgb(247, 247, 251);
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footerTextLeft,
+.footerTextRight,
+.footerTextCenter {
+    border-radius: 10px;
+    background: rgb(248, 248, 248);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 360px;
+    align-items: center;
+    padding-top: 34px;
+    padding-bottom: 27px;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+.footerTextLeft:hover,
+.footerTextRight:hover,
+.footerTextCenter:hover {
+    border-radius: 10px;
+    box-shadow: 0px 32px 34px 0px rgba(255, 112, 59, 0.32);
+    background: rgb(255, 113, 67);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 43px;
+    transform: scale(1.1);
+}
+
+.footerTextLeftTitle,
+.footerTextCenterTitle {
+    color: rgb(29, 41, 63);
+    font-family: "DM Sans", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 56px;
+    transition: 0.5s;
+}
+
+.footerSpan,
+.footerCenterSpan {
+    color: rgb(29, 41, 63);
+    font-family: "DM Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 56px;
+    transition: 0.5s;
+}
+
+.footerTextLeftWord,
+.footerTextRightWord,
+.footerTextCenterWord {
+    color: rgb(105, 104, 113);
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    transition: 0.5s;
+}
+
+
+.footerTextBtnRight,
+.footerTextBtnLeft,
+.footerTextBtnCenter {
+    width: 285px;
+    height: 60px;
+    border: 1px solid rgb(234, 233, 242);
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    color: rgb(84, 84, 212);
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+.footerTextLeft:hover .footerTextLeftTitle,
+.footerTextRight:hover .footerTextLeftTitle,
+.footerTextCenter:hover .footerTextCenterTitle {
+    color: rgb(255, 255, 255);
+}
+
+.footerTextRight:hover .footerSpan,
+.footerTextCenter:hover .footerCenterSpan {
+    color: rgb(255, 255, 255);
+}
+
+.footerTextLeft:hover .footerTextLeftWord,
+.footerTextRight:hover .footerTextRightWord,
+.footerTextCenter:hover .footerTextCenterWord {
+    color: rgb(255, 255, 255);
+}
+
+.footerTextLeft:hover .footerTextBtnLeft,
+.footerTextRight:hover .footerTextBtnRight,
+.footerTextCenter:hover .footerTextBtnCenter {
+    background: rgb(159, 57, 25);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(159, 57, 25);
+}
