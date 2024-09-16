@@ -22,7 +22,7 @@ p {
     margin-block-end: 0;
 }
 
-.container {
+.wrapper {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;

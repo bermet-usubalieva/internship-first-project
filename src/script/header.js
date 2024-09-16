@@ -1,5 +1,6 @@
 import { createButton } from "./button/headerButton.js";
 import logo from '../assets/img/logo.png';
+import { createNav } from "./nav.js";
 
 
 export function createHeader() {
@@ -16,23 +17,8 @@ export function createHeader() {
     logoText.className = 'logoText';
     logoText.textContent = 'logoipsum';
 
-    const nav = document.createElement('nav');
-    nav.className = 'nav';
-    const navUl = document.createElement('ul');
-    navUl.className = 'navUl';
-    const items = ['Home', 'Features', 'Pricing', 'Blog'];
-
-    items.forEach(text => {
-        const menuLi = document.createElement('li');
-        menuLi.classList.add('menuLi');
-        const menuItem = document.createElement('a');
-        menuItem.classList.add('menuItem');
-        menuItem.href = '';
-        menuItem.textContent = text;
-
-        menuLi.appendChild(menuItem);
-        navUl.appendChild(menuLi);
-    });
+    //nav
+    const nav = createNav()
 
     //buttnon
     const headerButton = createButton()
@@ -46,8 +32,19 @@ export function createHeader() {
     const headerSpan3 = document.createElement('span');
     headerSpan3.className = 'headerSpan3';
 
+    btn.addEventListener('click', () => {
+        header.classList.toggle('open')
+    })
+
+    document.addEventListener('click', (e) => {
+        const isClickInsideMenu = header.contains(e.target) || btn.contains(e.target);
+        if (!isClickInsideMenu) {
+            header.classList.remove('open');
+        }
+    });
+
     btn.append(headerSpan1, headerSpan2, headerSpan3);
-    nav.append(navUl);
+
     logoLink.append(logoImg, logoText);
     header.append(logoLink, nav, headerButton, btn);
 

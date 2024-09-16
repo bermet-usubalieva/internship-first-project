@@ -147,7 +147,7 @@
 }
 
 @media (max-width: 400px) {
-    .container {
+    .wrapper {
         padding: 0 20px;
     }
 
