@@ -1,6 +1,6 @@
-import { createButton } from "./button/headerButton.js";
+import { createButton } from "./button/headerButton";
 import logo from '../assets/img/logo.png';
-import { createNav } from "./nav.js";
+import { createNav } from "./nav";
 
 
 export function createHeader() {
@@ -37,11 +37,12 @@ export function createHeader() {
     })
 
     document.addEventListener('click', (e) => {
-        const isClickInsideMenu = header.contains(e.target) || btn.contains(e.target);
+        const isClickInsideMenu = header.contains(e.target as Node) || btn.contains(e.target as Node);
         if (!isClickInsideMenu) {
             header.classList.remove('open');
         }
     });
+
 
     btn.append(headerSpan1, headerSpan2, headerSpan3);
 

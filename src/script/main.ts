@@ -1,8 +1,8 @@
-import { createLogoSection } from "./section/createLogoSection.js";
-import { createBannerSection } from "./section/bannerSection.js";
-import { createContentSection } from "./section/contentSection.js";
-import { createMetricsSection } from "./section/metricsSection.js";
-import { createBenchmarksSection } from "./section/benchmarksSection.js";
+import { createLogoSection } from "./section/createLogoSection";
+import { createBannerSection } from "./section/bannerSection";
+import { createContentSection } from "./section/contentSection";
+import { createMetricsSection } from "./section/metricsSection";
+import { createBenchmarksSection } from "./section/benchmarksSection";
 
 export function createMain() {
     const main = document.createElement('main');

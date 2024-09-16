@@ -1,6 +1,7 @@
-import { createBannerButton } from "../button/bannerButton.js";
+import { createBannerButton } from "../button/bannerButton";
 import bannerSvg from '../../assets/img/arrow-down.svg'
 import bannerImg from '../../assets/img/banner.png'
+
 
 export function createBannerSection() {
     const bannerSection = document.createElement('section');
