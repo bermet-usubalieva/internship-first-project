@@ -1,3 +1,6 @@
+@import 'var';
+@import 'fonts';
+
 * {
     margin: 0;
     padding: 0;
@@ -53,8 +56,8 @@ p {
 }
 
 .logoText {
-    font-family: 'DM Sans', sans-serif;
-    color: rgb(25, 25, 27);
+    font-family: $font-family-primary;
+    color: $dark-color;
     font-weight: 800;
     font-size: 23px;
 }
@@ -66,8 +69,8 @@ p {
 }
 
 .menuItem {
-    color: rgb(105, 104, 113);
-    font-family: 'DM Sans', sans-serif;
+    color: $gray-color;
+    font-family: $font-family-primary;
     font-size: 15px;
     font-weight: 700;
     line-height: 20px;
@@ -80,7 +83,7 @@ p {
     position: absolute;
     width: 100%;
     height: 2px;
-    background: rgb(84, 84, 212);
+    background: $primary-color;
     bottom: -10px;
     left: 0;
     opacity: 0;
@@ -89,7 +92,7 @@ p {
 }
 
 .menuItem:hover {
-    color: rgb(25, 25, 27);
+    color: $dark-color;
 }
 
 .menuItem:hover::after {
@@ -101,9 +104,9 @@ p {
     width: 210px;
     height: 50px;
     border-radius: 10px;
-    background: rgb(255, 113, 67);
+    background: $secondary-color;
     border: none;
-    color: rgb(255, 255, 255);
+    color: $light-color;
     font-family: "DM Sans", sans-serif;
     font-size: 17px;
     font-weight: 700;
@@ -113,7 +116,7 @@ p {
 }
 
 .headerButton:hover {
-    background: rgb(84, 84, 212);
+    background: $primary-color;
 }
 
 .headerBurger {
@@ -130,7 +133,7 @@ p {
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: rgb(255, 113, 67);
+    background-color: $secondary-color;
     display: block;
     left: 5px;
     transition: 0.3s;
@@ -145,7 +148,7 @@ p {
 }
 
 .header.open .headerBurger span {
-    background-color: rgb(255, 255, 255);
+    background-color: $light-color;
 }
 
 .header.open .headerBurger span:nth-child(1) {
@@ -173,7 +176,7 @@ p {
 }
 
 .mainTitle {
-    color: rgb(25, 25, 27);
+    color: $dark-color;
     font-family: "DM Sans", sans-serif;
     font-size: 80px;
     font-weight: 700;
@@ -182,8 +185,8 @@ p {
 }
 
 .bannerText {
-    color: rgb(105, 104, 113);
-    font-family: 'Mulish', sans-serif;
+    color: $gray-color;
+    font-family: $font-family-secondary;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -200,9 +203,9 @@ p {
     width: 210px;
     height: 50px;
     border-radius: 10px;
-    background: rgb(84, 84, 212);
+    background: $primary-color;
     border: none;
-    color: rgb(255, 255, 255);
+    color: $light-color;
     font-family: "DM Sans", sans-serif;
     font-size: 17px;
     font-weight: 700;
@@ -212,13 +215,13 @@ p {
 }
 
 .bannerButton:hover {
-    background: rgb(255, 113, 67);
+    background: $secondary-color;
 }
 
 .bannerArrowWrap {
     box-sizing: border-box;
     border: 1px solid rgb(231, 231, 231);
-    background: rgb(255, 255, 255);
+    background: $light-color;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -229,7 +232,7 @@ p {
 }
 
 .bannerArrowWrap:hover {
-    background: rgb(255, 113, 67);
+    background: $secondary-color;
 }
 
 .svgSection {
@@ -256,7 +259,7 @@ p {
 }
 
 .contentTitle {
-    color: rgb(25, 25, 27);
+    color: $dark-color;
     font-family: "DM Sans", sans-serif;
     font-size: 50px;
     font-weight: 700;
@@ -264,15 +267,15 @@ p {
 }
 
 .contentText {
-    color: rgb(105, 104, 113);
-    font-family: 'Mulish', sans-serif;
+    color: $gray-color;
+    font-family: $font-family-secondary;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
 }
 
 .contentLink {
-    color: rgb(84, 84, 212);
+    color: $primary-color;
     font-family: "DM Sans", sans-serif;
     font-size: 17px;
     font-weight: 700;
@@ -281,7 +284,7 @@ p {
 }
 
 .contentLink:hover {
-    color: rgb(255, 113, 67);
+    color: $secondary-color;
 }
 
 .benchmarksSection {
@@ -303,7 +306,7 @@ p {
 .benchmarksTitle {
     margin-top: 7px;
     margin-bottom: 20px;
-    color: rgb(25, 25, 27);
+    color: $dark-color;
     font-family: "DM Sans", sans-serif;
     font-size: 24px;
     font-weight: 700;
@@ -311,8 +314,8 @@ p {
 }
 
 .benchmarksText {
-    color: rgb(105, 104, 113);
-    font-family: 'Mulish', sans-serif;
+    color: $gray-color;
+    font-family: $font-family-secondary;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -330,7 +333,7 @@ p {
 }
 
 .footerTitle {
-    color: rgb(25, 25, 27);
+    color: $dark-color;
     font-family: " DM Sans", sans-serif;
     font-size: 60px;
     font-weight: 700;
@@ -351,11 +354,11 @@ p {
 .footerBtnLeft,
 .footerBtnRight {
     border-radius: 10px 0px 0px 10px;
-    background: rgb(84, 84, 212);
+    background: $primary-color;
     width: 160px;
     height: 55px;
     border: none;
-    color: rgb(255, 255, 255);
+    color: $light-color;
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -366,11 +369,11 @@ p {
     border-radius: 0px 10px 10px 0px;
     background: rgb(247, 247, 251);
     transition: 0.3s;
-    color: rgb(25, 25, 27);
+    color: $dark-color;
 }
 
 .footerBtnRight:hover {
-    background: rgb(255, 113, 67);
+    background: $secondary-color;
     color: rgb(247, 247, 251);
 }
 
@@ -402,7 +405,7 @@ p {
 .footerTextCenter:hover {
     border-radius: 10px;
     box-shadow: 0px 32px 34px 0px rgba(255, 112, 59, 0.32);
-    background: rgb(255, 113, 67);
+    background: $secondary-color;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -435,7 +438,7 @@ p {
 .footerTextLeftWord,
 .footerTextRightWord,
 .footerTextCenterWord {
-    color: rgb(105, 104, 113);
+    color: $gray-color;
     font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -451,8 +454,8 @@ p {
     height: 60px;
     border: 1px solid rgb(234, 233, 242);
     border-radius: 10px;
-    background: rgb(255, 255, 255);
-    color: rgb(84, 84, 212);
+    background: $light-color;
+    color: $primary-color;
     font-family: "DM Sans", sans-serif;
     font-size: 17px;
     font-weight: 700;
@@ -464,24 +467,24 @@ p {
 .footerTextLeft:hover .footerTextLeftTitle,
 .footerTextRight:hover .footerTextLeftTitle,
 .footerTextCenter:hover .footerTextCenterTitle {
-    color: rgb(255, 255, 255);
+    color: $light-color;
 }
 
 .footerTextRight:hover .footerSpan,
 .footerTextCenter:hover .footerCenterSpan {
-    color: rgb(255, 255, 255);
+    color: $light-color;
 }
 
 .footerTextLeft:hover .footerTextLeftWord,
 .footerTextRight:hover .footerTextRightWord,
 .footerTextCenter:hover .footerTextCenterWord {
-    color: rgb(255, 255, 255);
+    color: $light-color;
 }
 
 .footerTextLeft:hover .footerTextBtnLeft,
 .footerTextRight:hover .footerTextBtnRight,
 .footerTextCenter:hover .footerTextBtnCenter {
     background: rgb(159, 57, 25);
-    color: rgb(255, 255, 255);
+    color: $light-color;
     border: 1px solid rgb(159, 57, 25);
 }
