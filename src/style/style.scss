@@ -1,6 +1,3 @@
-@import 'var';
-@import 'fonts';
-
 * {
     margin: 0;
     padding: 0;
@@ -416,7 +413,8 @@ p {
 }
 
 .footerTextLeftTitle,
-.footerTextCenterTitle {
+.footerTextCenterTitle,
+.footerTextRightTitle {
     color: rgb(29, 41, 63);
     font-family: "DM Sans", sans-serif;
     font-size: 60px;
@@ -465,7 +463,7 @@ p {
 }
 
 .footerTextLeft:hover .footerTextLeftTitle,
-.footerTextRight:hover .footerTextLeftTitle,
+.footerTextRight:hover .footerTextRightTitle,
 .footerTextCenter:hover .footerTextCenterTitle {
     color: $light-color;
 }

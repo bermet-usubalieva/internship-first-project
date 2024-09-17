@@ -1,8 +1,7 @@
-import './style/style.scss';
-import './style/media.scss';
-import { createHeader } from './script/header';
-import { createMain } from './script/main';
-import { createFooter } from './script/footer';
+import './index.scss';
+import { createHeader } from './components/header';
+import { createMain } from './components/main';
+import { createFooter } from './components/footer';
 
 const wrapper = document.createElement('div');
 wrapper.className = 'wrapper';

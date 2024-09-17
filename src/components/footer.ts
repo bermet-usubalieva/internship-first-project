@@ -15,6 +15,7 @@ export function createFooter() {
     footerBtnRight.className = 'footerBtnRight'
     footerBtnRight.textContent = 'Monthly'
 
+
     const footerBottom = document.createElement('div')
     footerBottom.className = 'footerBottom'
 
@@ -83,7 +84,7 @@ export function createFooter() {
     footerTextRightWord1.textContent = 'Enterprise'
 
     const footerTextRightTitle = document.createElement('p')
-    footerTextRightTitle.className = 'footerTextLeftTitle'
+    footerTextRightTitle.className = 'footerTextRightTitle'
     footerTextRightTitle.textContent = '$49'
     const footerSpan = document.createElement('span')
     footerSpan.className = 'footerSpan'
@@ -105,7 +106,31 @@ export function createFooter() {
     footerTextBtnRight.className = 'footerTextBtnRight'
     footerTextBtnRight.textContent = 'Get Started'
 
+    function toggleButtons(isLeftActive: boolean) {
+        if (isLeftActive) {
+            footerTextCenterTitle.textContent = '$29';
+            footerTextRightTitle.textContent = '$49';
+            footerBtnLeft.style.backgroundColor = 'rgb(84, 84, 212)';
+            footerBtnLeft.style.color = 'rgb(247, 247, 251)';
+            footerBtnRight.style.backgroundColor = 'rgb(247, 247, 251)';
+            footerBtnRight.style.color = 'rgb(34, 34, 34)';
+        } else {
+            footerTextCenterTitle.textContent = '$19';
+            footerTextRightTitle.textContent = '$39';
+            footerBtnRight.style.backgroundColor = 'rgb(255, 113, 67)';
+            footerBtnRight.style.color = 'rgb(247, 247, 251)';
+            footerBtnLeft.style.backgroundColor = 'rgb(247, 247, 251)';
+            footerBtnLeft.style.color = 'rgb(34, 34, 34)';
+        }
+    }
 
+    footerBtnLeft.addEventListener('click', () => {
+        toggleButtons(true);
+    });
+
+    footerBtnRight.addEventListener('click', () => {
+        toggleButtons(false);
+    });
 
 
     footerTextRightTitle.append(footerSpan)
